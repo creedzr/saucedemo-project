@@ -1,2 +1,2 @@
 # saucedemo-project
-mini project automation saucedemo
+masih dalam proses pengerjaan :)
