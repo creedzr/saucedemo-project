@@ -1,0 +1,161 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-14T12:54:07.264Z",
+    "end": "2025-08-14T12:54:15.238Z",
+    "duration": 7974,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21d9793a-d394-45aa-a2f3-57e2035c3a0a",
+      "title": "",
+      "fullFile": "cypress\\integration\\sort.test.js",
+      "file": "cypress\\integration\\sort.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "88e03b45-ee0e-479a-9353-af005db9c5ab",
+          "title": "Sort Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sort Name A-Z",
+              "fullTitle": "Sort Products Sort Name A-Z",
+              "timedOut": null,
+              "duration": 2584,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortPage.selectSort('az');\nsortPage.getProductNames().then(names => {\n  const sortedNames = [...names].sort();\n  expect(names).to.deep.equal(sortedNames);\n});",
+              "err": {},
+              "uuid": "ae125873-1a2c-4639-b5b8-6b326ee70c8c",
+              "parentUUID": "88e03b45-ee0e-479a-9353-af005db9c5ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sort Name Z-A",
+              "fullTitle": "Sort Products Sort Name Z-A",
+              "timedOut": null,
+              "duration": 1178,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortPage.selectSort('za');\nsortPage.getProductNames().then(names => {\n  const sortedNames = [...names].sort().reverse();\n  expect(names).to.deep.equal(sortedNames);\n});",
+              "err": {},
+              "uuid": "79e6e76a-1758-431b-9b58-fac05661705b",
+              "parentUUID": "88e03b45-ee0e-479a-9353-af005db9c5ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sort Price Low to High",
+              "fullTitle": "Sort Products Sort Price Low to High",
+              "timedOut": null,
+              "duration": 1389,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortPage.selectSort('lohi');\nsortPage.getProductPrices().then(prices => {\n  const sortedPrices = [...prices].sort((a, b) => a - b);\n  expect(prices).to.deep.equal(sortedPrices);\n});",
+              "err": {},
+              "uuid": "0c5f3b5c-d0c4-4642-aa70-702b0e8c8877",
+              "parentUUID": "88e03b45-ee0e-479a-9353-af005db9c5ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sort Price High to Low",
+              "fullTitle": "Sort Products Sort Price High to Low",
+              "timedOut": null,
+              "duration": 1183,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortPage.selectSort('hilo');\nsortPage.getProductPrices().then(prices => {\n  const sortedPrices = [...prices].sort((a, b) => b - a);\n  expect(prices).to.deep.equal(sortedPrices);\n});",
+              "err": {},
+              "uuid": "d24581a9-b632-4533-9299-753446ee9fd8",
+              "parentUUID": "88e03b45-ee0e-479a-9353-af005db9c5ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae125873-1a2c-4639-b5b8-6b326ee70c8c",
+            "79e6e76a-1758-431b-9b58-fac05661705b",
+            "0c5f3b5c-d0c4-4642-aa70-702b0e8c8877",
+            "d24581a9-b632-4533-9299-753446ee9fd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6334,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
