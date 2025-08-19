@@ -1,11 +1,11 @@
 class LoginPage{
-    // for open Website saucedemo.com
+    // untuk nuka Website saucedemo.com
     visit() {
         cy.visit('https://www.saucedemo.com');
     }
-    // fill username field
+    // mengisi field username
     FillUsername(username) {
-        // Check if username is provided, if not, it will not type anything
+        // cek apakah username ada, jika tidak ada, tidak akan mengetik apa pun
         if (username) {
        cy.get('[data-test="username"]', { timeout: 100 })
             .should('be.visible')
@@ -14,18 +14,18 @@ class LoginPage{
     }
     //fill password field
     FillPassword(password) {
-        // Check if password is provided, if not, it will not type anything
+        // cek apakah password ada, jika tidak ada, tidak akan mengetik apa pun
         if (password) {
         cy.get('[data-test="password"]', { timeout: 100 })
             .should('be.visible')
             .type(password);
         }
     }
-    // click on login button
+    //klik tombol login
     clickLoginButton() {    
         cy.get('.btn_action').click();
     }    
-    // Method generik for login 
+    // Menggukan data generik untuk login
     login(username, password) {
         this.FillUsername(username);
         this.FillPassword(password);
