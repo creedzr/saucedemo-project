@@ -7,7 +7,7 @@ End-to-end test suite untuk demo e-commerce **[SauceDemo](https://www.saucedemo.
 ## ✅ Fitur yang Diuji  
 | Modul             | Skenario yang tercover |
 |-------------------|------------------------|
-| Login             | Valid, locked, invalid credential |
+| Login             | Valid,  invalid credential |
 | Product           | Sort, add-to-cart, remove, detail page |
 | Cart              | Persistensi item, remove, checkout flow |
 | Checkout          | Form validasi, overview, finish order |
